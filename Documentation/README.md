@@ -1,7 +1,5 @@
 # Documents Index
 
-This repo includes documents that explain how to use and build the product. It also provides detailed information about the project.
+Documentation is forthcoming.
 
-Here is a good example of this file: https://github.com/dotnet/coreclr/blob/master/Documentation/README.md.
-
-This is where a TOC goes!
+Meanwhile, there are scans (PDFs) of notes I wrote in the artifacts folder. I'll transcribe those with https://github.com/AlanMcBee/XFX/issues/2
