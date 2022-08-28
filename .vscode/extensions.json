@@ -1,6 +1,16 @@
 {
     "recommendations": [
         "eamodio.gitlens",
-        "PatrickDanilevici.black-gold"
+        "patrickdanilevici.black-gold",
+        "alefragnani.bookmarks",
+        "ms-dotnettools.csharp",
+        "editorconfig.editorconfig",
+        "mhutchie.git-graph",
+        "donjayamanne.githistory",
+        "github.copilot",
+        "visualstudioexptteam.vscodeintellicode",
+        "ms-vscode.powershell",
+        "britesnow.vscode-toggle-quotes",
+        "fernandoescolar.vscode-solution-explorer"
     ]
 }
