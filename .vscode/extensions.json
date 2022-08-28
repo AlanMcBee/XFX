@@ -11,6 +11,7 @@
         "visualstudioexptteam.vscodeintellicode",
         "ms-vscode.powershell",
         "britesnow.vscode-toggle-quotes",
-        "fernandoescolar.vscode-solution-explorer"
+        "fernandoescolar.vscode-solution-explorer",
+        "tomoki1207.pdf"
     ]
 }
