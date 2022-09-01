@@ -63,11 +63,59 @@ To-Do has a "My Day" feature. Add tasks to My Day, and then work just from that 
 
 To-Do also has a very powerfully intuitive UI for adding and managing basic actions. I find it not so wonderful for managing projects.
 
+Even so, To-Do is fast and friendly. It would be my primary activity tracking tool, but I would not use it for my project planning or tracking with its current features.
+
 #### Microsoft Outlook
 Outlook has my favorite email and calendar tools. Emails can be flagged for followup, including sending an email to someone else that is pre-flagged so that you are notified when they mark it as complete. The calendars are fast and well done. Outlook tasks are sophisticated: you can create recurring tasks and provide considerable other details to them. Outlook tasks are used by Microsoft To-Do; a task created in To-Do will automatically appear in Outlook, and vice-versa.
 
-Like To-Do, Outlook does not manage projects well.
+Like To-Do, Outlook does not manage projects well. Outlook would be my primary communication and scheduling tool, where I would occasionally create or report on the status of assigned tasks or flagged emails.
 
 #### Microsoft OneNote
 OneNote is not ordinarily thought of as an activity system, but it does have to-do-style checkboxes, and it can also create Outlook tasks that are linked to paragraphs in OneNote. However, the main thing I like for OneNote is that is works great for project support. That is, for any given project that I'm doing, I nearly always want to have a section in OneNote that I use to track records, thoughts, and other notes about the project.
+
+#### Microsoft Excel
+Excel isn't an activity planner of any kind. But it is good at working with lists. There are times that I wish I could look at or edit details of projects in bulk. Excel is a great tool for that.
+
+#### Microsoft Planner
+Planner is good for team-based project management. Using a Kanban-style layout, it's easy to see a board of in-flight projects organized by priority order, and quickly update details. To-Do can show tasks from projects that are assigned to individuals, which is a nice way to bring all that together.
+
+However, Planner is part of Microsoft 365 and not yet readily available to consumers. Even if it were availalbe, Planner does not easily aggregate all of the different Planners for teams in which a user might be a member. This makes it difficult to prioritize across multiple teams or groups of projects.
+
+I would use Planner to plan the projects withing a team and to break down those projects into tasks. Sometimes I will update the tasks from Planner, but I would usually not have Planner open when I am considering which next actions I plan to do throughout the day.
+
+#### Microsoft OneDrive
+OneDrive is not an activity planner. It's a file storage service. This makes it a great place to store project support documents.
+
+#### Azure DevOps
+I'm a software engineer, and I can expect to spend considerable time using this product to complete my work at work. It includes Kanbans, backlog ordering, and project-to-task breakdown abilities, as well as some scheduling features.
+
+While I very much appreciate Azure DevOps features, it doesn't update or interact with other systems. So tasks that I create in Azure DevOps will not automatically appear in To-Do or Outlook. Azure DevOps does not work as well for day-to-day projects and tasks.
+
+#### Microsoft Project
+Project is the industrial-strength project planning tool. It can handle the largest project you might want to throw into it. It is far too unwieldy to use as a personal task and activity planner. Even so, it can be used to assign tasks to individuals.
+
+#### Microsoft Lists
+Lists provides a simple interface for working with basic lists. It might be helpful to use it to show project or task status.
+
+#### Many many others
+- Asana
+- Trello
+- Monday
+- Todoist
+I am not going to compile an exhaustive list of all the planning and activity tools that are out there. Many are great tools, with great features. I'm not going to outdo any of them. I don't think I need to. None of them are going to traverse the work/life thresholds well. Or they focus too much on planning and not so much on doing.
+
+## Solution Architecture
+Even though XFX is not designed to be the end-all-and-be-all of project planning and activity tracking systems, it will need a custom user interface and some rudimentary features to enter and work with projects and tasks, not to mention other settings or configuration values.
+
+### Smart Clients
+I have choices to make, specifically for the client portions of the system.
+- WPF
+- MAUI
+- Blazor
+- WinForms
+I am definitely going to stay away from Javascript-based platforms. And, even though I'm comfortable with HTML and CSS, I don't love those enough to feel that they are an easy choice over alternate client technologies.
+
+The client portion of the system will be responsible for coordinating the interaction between sources that are held by or in systems that might not be under the direct control of the user. The client system might rely on a shared scheduling service, but any sensitive information about the data being processed (projects, activities, tasks, etc.) will be kept out of the shared services. Those services will work only with the necessary essential properties they need, which should not include titles, descriptions, PII, and so on. The client will be responsible for mapping operational data used by those shared systems back to the authoritative sources.
+
+While I am planning a shared service that can support scheduling or other operations, I plan to include some or most of those operations as supplemental features in the client.
 
