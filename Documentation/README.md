@@ -1,8 +1,8 @@
 # Documents Index
 
-Documentation is forthcoming.
+This is *project* documentation, not documentation for the released product.
 
-Meanwhile, there are scans (PDFs) of notes I wrote in the artifacts folder. I'll transcribe those with https://github.com/AlanMcBee/XFX/issues/2
+To start this off, there are scans (PDFs) of notes I wrote in the artifacts folder. I'll transcribe those with https://github.com/AlanMcBee/XFX/issues/2
 
 ## Transcribed thoughts from PDFs
 
